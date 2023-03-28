@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidSmartDevice</string>
+    <string name="ble_scan_title_pause">En cours de SCAN</string>
+    <string name="ble_scan_title_play">Lancer le SCAN</string>
+
+
+</resources>
