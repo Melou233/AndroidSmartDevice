@@ -182,23 +182,6 @@ class ScanActivity : AppCompatActivity(){
         }
     }
 
-    private fun startScan(bluetoothLeScanner: BluetoothLeScanner) {
-        if (bluetoothAdapter == null) {
-            Toast.makeText(this, "Bluetooth non disponible", Toast.LENGTH_SHORT).show()
-            return
-        }
-        if (bluetoothAdapter?.isEnabled == false) {
-            Toast.makeText(this, "Bluetooth non activé", Toast.LENGTH_SHORT).show()
-            return
-        }
-        if (bluetoothAdapter?.isEnabled == true) {
-            binding.scanButton.setOnClickListener() {
-                togglePlayPauseAction()
-                scanLeDevice()
-            }
-        }
-    }
-
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {

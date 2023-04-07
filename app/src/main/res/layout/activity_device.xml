@@ -6,4 +6,106 @@
     android:layout_height="match_parent"
     tools:context=".DeviceActivity">
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="led3,led2,abonneText,checkBox,led1,cptClick" />
+
+    <ImageView
+        android:id="@+id/led3"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="@+id/led2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/led2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/led" />
+
+    <ImageView
+        android:id="@+id/led2"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toStartOf="@+id/led3"
+        app:layout_constraintStart_toEndOf="@+id/led1"
+        app:layout_constraintTop_toBottomOf="@+id/textLed"
+        app:srcCompat="@drawable/led" />
+
+    <TextView
+        android:id="@+id/detailloaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="182dp"
+        android:text="TPBLE"
+        android:textColor="#3F51B5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textLed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:text="Connexion en cours ..."
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailloaderTitle" />
+
+    <TextView
+        android:id="@+id/abonneText"
+        android:layout_width="195dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="50dp"
+        android:text="Abonnez vous pour recevoir le nombre d'incrémentation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led1" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/abonneText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/abonneText"
+        app:layout_constraintTop_toTopOf="@+id/abonneText" />
+
+    <ImageView
+        android:id="@+id/led1"
+        android:layout_width="100dp"
+        android:layout_height="85dp"
+        app:layout_constraintBottom_toBottomOf="@+id/led2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/led2"
+        app:srcCompat="@drawable/led" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="180dp"
+        android:layout_height="186dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/cptClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Nombre de click :"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/abonneText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
