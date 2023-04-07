@@ -96,7 +96,7 @@ class DeviceActivity : AppCompatActivity() {
     private fun displayContentConnected(){
         binding.detailloaderTitle.text= getString(R.string.device_led_text)
         binding.group.isVisible = true
-        binding.group2.isInvisible
+        binding.group2.isInvisible = true
         clickOnLed()
     }
 
