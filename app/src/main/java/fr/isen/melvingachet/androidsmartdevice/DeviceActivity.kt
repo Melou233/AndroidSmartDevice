@@ -9,6 +9,7 @@ import android.bluetooth.BluetoothGattCallback
 import android.bluetooth.BluetoothProfile
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import fr.isen.melvingachet.androidsmartdevice.databinding.ActivityDeviceBinding
 import java.util.*
@@ -95,6 +96,7 @@ class DeviceActivity : AppCompatActivity() {
     private fun displayContentConnected(){
         binding.detailloaderTitle.text= getString(R.string.device_led_text)
         binding.group.isVisible = true
+        binding.group2.isInvisible
         clickOnLed()
     }
 

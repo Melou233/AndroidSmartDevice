@@ -42,7 +42,7 @@ class ScanAdapter(var devices: ArrayList<android.bluetooth.BluetoothDevice>, var
     }
 
     @SuppressLint("MissingPermission")
-    fun addDevice(device: android.bluetooth.BluetoothDevice, rssi: Int) {
+    fun addDevice(device: android.bluetooth.BluetoothDevice) {
         var shouldAddDevice = true
         devices.forEachIndexed { index, bluetoothDevice ->
             if (bluetoothDevice.address == device.address) {
